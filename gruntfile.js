@@ -8,7 +8,8 @@ module.exports = function (grunt) {
                 },
                 files: {
                     './src/assets/css/main.css': './src/assets/scss/main.scss',
-                    './src/assets/css/bootstrap.css': './src/assets/scss/bootstrap.scss'
+                    './src/assets/css/bootstrap.css': './src/assets/scss/bootstrap.scss',
+                    './src/assets/css/fontawesome.css': './src/assets/scss/fontawesome.scss'
                 }
             }
         },
@@ -38,13 +39,22 @@ module.exports = function (grunt) {
                 files: ['./src/**/*.scss'],
                 tasks: ['sass']
             }
+        },
+        copy: {
+            main: {
+              expand: true,
+              cwd: './node_modules/@fortawesome/fontawesome-free/webfonts/',
+              src: '*',
+              dest: './src/assets/webfonts',
+            },
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-php');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
 
-    grunt.registerTask('server', ['sass', 'php', 'browserSync', 'watch']);
+    grunt.registerTask('server', ['copy', 'sass', 'php', 'browserSync', 'watch']);
 }
