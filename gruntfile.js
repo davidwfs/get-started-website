@@ -7,7 +7,8 @@ module.exports = function (grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    './src/assets/css/main.css': './src/assets/scss/main.scss'
+                    './src/assets/css/main.css': './src/assets/scss/main.scss',
+                    './src/assets/css/bootstrap.css': './src/assets/scss/bootstrap.scss'
                 }
             }
         },
@@ -27,18 +28,15 @@ module.exports = function (grunt) {
                 options: {
                     proxy: '127.0.0.1:8000',
                     port: 8000,
-                    open: false,
+                    open: true,
                     watchTask: true
                 }
             }
         },
         watch: {
             sass: {
-                files: ['**/*.scss'],
+                files: ['./src/**/*.scss'],
                 tasks: ['sass']
-            },
-            php: {
-                files: ['**/*.{php,html,css}']
             }
         }
     });
