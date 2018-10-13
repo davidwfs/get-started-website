@@ -4,6 +4,24 @@
   "description": "Simple base project for website",
   "author": "David Washington",
   "license": "MIT",
-  "scripts": {},
-  "devDependencies": {}
+  "scripts": {
+    "build": "webpack --config webpack.config.js --mode production",
+    "dev": "webpack --config webpack.config.js --mode development",
+    "start": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "dependencies": {
+    "babel-loader": "7"
+  }
 }
