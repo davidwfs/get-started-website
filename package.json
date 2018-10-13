@@ -4,21 +4,6 @@
   "description": "Simple base project for website",
   "author": "David Washington",
   "license": "MIT",
-  "scripts": {
-    "start": "grunt server"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.18.12",
-    "grunt": "^1.0.3",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-concat": "0.1.6",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "2.0.0",
-    "grunt-contrib-htmlmin": "2.3.0",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "2.2.0",
-    "grunt-contrib-watch": "1.0.0",
-    "grunt-image": "2.2.3",
-    "grunt-php": "1.5.1"
-  }
+  "scripts": {},
+  "devDependencies": {}
 }
