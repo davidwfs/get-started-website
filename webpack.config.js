@@ -1,8 +1,14 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = (env, argv) => {
   return {
+    optimization: {
+      minimizer: [
+        new OptimizeCSSAssetsPlugin({})
+      ]
+    },
     entry: ['./assets/js/main.js', './assets/scss/main.scss'],
     output: {
       filename: 'bundle.js',
