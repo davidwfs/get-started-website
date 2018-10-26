@@ -14,8 +14,6 @@ You need to have [NodeJS](https://nodejs.org/en/) with npm.
 
 To start `yarn start` or `npm start`.
 
-To generator build dev `yarn dev` or `npm run dev`.
-
 To generator build `yarn start` or `npm run build`.
 
 ## Authors
