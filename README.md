@@ -12,9 +12,11 @@ You need to have [NodeJS](https://nodejs.org/en/) with npm.
 
 ### Running
 
+Install modules `yarn` or `npm install`.
+
 To start `yarn start` or `npm start`.
 
-To generator build `yarn build` or `npm run build`.
+To build `yarn build` or `npm run build`.
 
 ## Authors
 
