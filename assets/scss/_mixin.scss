@@ -3,20 +3,20 @@
   width: 100%;
 }
 
-@mixin transform($property) {
-  -webkit-transform: $property;
-      -ms-transform: $property;
-          transform: $property;
+@mixin support($property, $value) {
+  -webkit-#{$property}: $value;
+      -ms-#{$property}: $value;
+          #{$property}: $value;
 }
 
-@mixin filter($property) {
-  -webkit-filter: $property;
-      -ms-filter: $property;
-          filter: $property;
+@mixin transform($value) {
+  @include support(transform, $value);
 }
 
-@mixin transition($values) {
-  -webkit-transition: $values;
-      -ms-transition: $values;
-          transition: $values;
+@mixin filter($value) {
+  @include support(filter, $value);
+}
+
+@mixin transition($value) {
+  @include support(transition, $value);
 }
