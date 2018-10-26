@@ -1,7 +1,7 @@
 {
   "name": "get-started-website",
   "version": "1.0.0",
-  "description": "Simple base project for website",
+  "description": "Simple base project for website.",
   "author": "David Washington",
   "license": "MIT",
   "scripts": {
@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-loader": "7",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "mini-css-extract-plugin": "^0.4.4",
@@ -21,8 +22,5 @@
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.9"
-  },
-  "dependencies": {
-    "babel-loader": "7"
   }
 }
