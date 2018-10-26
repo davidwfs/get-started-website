@@ -1,0 +1,22 @@
+@mixin maw($value) {
+  max-width: $value;
+  width: 100%;
+}
+
+@mixin support($property, $value) {
+  -webkit-#{$property}: $value;
+      -ms-#{$property}: $value;
+          #{$property}: $value;
+}
+
+@mixin transform($value) {
+  @include support(transform, $value);
+}
+
+@mixin filter($value) {
+  @include support(filter, $value);
+}
+
+@mixin transition($value) {
+  @include support(transition, $value);
+}

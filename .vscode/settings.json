@@ -1,0 +1,18 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/.sass-cache": true,
+    "**/.vscode": true
+  },
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "boundary",
+  "editor.snippetSuggestions": "top",
+  "files.insertFinalNewline": true,
+  "scss.lint.duplicateProperties": "warning",
+  "scss.lint.fontFaceProperties": "error",
+  "scss.lint.idSelector": "warning",
+  "scss.lint.important": "warning",
+  "scss.lint.universalSelector": "error"
+}

@@ -1,29 +1,25 @@
 {
   "name": "get-started-website",
-  "version": "1.0.0",
-  "description": "",
-  "devDependencies": {
-    "browser-sync": "^2.18.12",
-    "grunt": "^1.0.3",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-concat": "0.1.6",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "2.0.0",
-    "grunt-contrib-htmlmin": "2.3.0",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "2.2.0",
-    "grunt-contrib-watch": "1.0.0",
-    "grunt-image": "2.2.3",
-    "grunt-php": "1.5.1"
-  },
-  "scripts": {
-    "start": "grunt server"
-  },
+  "version": "2.0.0",
+  "description": "Simple base project for website.",
   "author": "David Washington",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.1.0",
-    "bootstrap": "^4.1.1",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.14.3"
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --mode production",
+    "start": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "7",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
   }
 }

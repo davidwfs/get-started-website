@@ -1,4 +1,4 @@
 /node_modules
 /.sass-cache
-/src/assets/css
-/src/assets/webfonts
+/dist
+/.DS_Store
