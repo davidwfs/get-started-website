@@ -8,19 +8,17 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You need to have [NodeJS](https://nodejs.org/en/) with npm.
+You need to have [NodeJS](https://nodejs.org/en/).
 
-### Running
+### Running the server
 
-Install modules `yarn` or `npm install`.
+To start you only need these 2 commands in the root folder.
+```
+yarn
+yarn dev
+```
 
-To start `yarn start` or `npm start`.
-
-To build `yarn build` or `npm run build`.
-
-## Authors
-
-* [David Washington](https://github.com/DavidWashington833)
+To build use `yarn build`.
 
 ## License
 
