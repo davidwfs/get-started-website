@@ -7,15 +7,8 @@ module.exports = () => {
   return {
     optimization: {
       minimizer: [
-        new UglifyJsPlugin({
-          cache: true,
-          parallel: true,
-          sourceMap: true
-        }),
-        new OptimizeCSSAssetsPlugin({
-          cssProcessorOptions: { discardComments: { removeAll: true } },
-          canPrint: true
-        })
+        new UglifyJsPlugin(),
+        new OptimizeCSSAssetsPlugin()
       ]
     },
     entry: [
