@@ -2,3 +2,4 @@
 /.sass-cache
 /dist
 /.DS_Store
+yarn.lock
