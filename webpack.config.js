@@ -1,10 +1,9 @@
-const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJsPlugin = require('uglify-js-plugin');
 
-module.exports = (env, argv) => {
+module.exports = () => {
   return {
     optimization: {
       minimizer: [
@@ -19,11 +18,10 @@ module.exports = (env, argv) => {
         })
       ]
     },
-    entry: ['./assets/js/main.js', './assets/scss/main.scss'],
-    output: {
-      filename: 'bundle.js',
-      path: path.resolve(__dirname, 'dist')
-    },
+    entry: [
+      './assets/js/main.js',
+      './assets/scss/main.scss'
+    ],
     module: {
       rules: [
         {
@@ -37,7 +35,7 @@ module.exports = (env, argv) => {
           test: /\.scss$/,
           exclude: /node_modules/,
           use: [
-            argv.mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
+            MiniCssExtractPlugin.loader,
             'css-loader',
             'sass-loader'
           ]
@@ -56,9 +54,7 @@ module.exports = (env, argv) => {
       ]
     },
     plugins: [
-      new MiniCssExtractPlugin({
-        filename: 'bundle.css'
-      }),
+      new MiniCssExtractPlugin(),
       new HtmlWebpackPlugin({
         template: './index.html'
       })
